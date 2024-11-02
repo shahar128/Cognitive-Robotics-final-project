@@ -27,7 +27,6 @@ Camera and GPS: The robot uses camera recognition for item detection and a GPS f
 - A* Algorithm: Implemented for optimal planning to sort items into bins based on time and reward constraints.
 How It Works
 - Item Detection: The robot’s camera detects items on the table with unique colors representing each recyclable type.
-- Path Planning: The A* algorithm computes paths based on the closest item and bin locations, maximizing rewards.
 - Recycling: Upon successful item placement in the bin, rewards are accumulated, and new items appear periodically to keep the task dynamic.
 
 ## youtube video
