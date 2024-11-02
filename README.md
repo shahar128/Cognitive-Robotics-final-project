@@ -24,7 +24,7 @@ protos: contains custom PROTO files used to define reusable and customizable obj
 ## Implementation Details
 - Robot Design: KUKA YouBot with omnidirectional Mecanum wheels allowing for flexible movement.
 Camera and GPS: The robot uses camera recognition for item detection and a GPS for navigation accuracy.
-- A Algorithm*: Implemented for optimal planning to sort items into bins based on time and reward constraints.
+- A* Algorithm: Implemented for optimal planning to sort items into bins based on time and reward constraints.
 How It Works
 - Item Detection: The robot’s camera detects items on the table with unique colors representing each recyclable type.
 - Path Planning: The A* algorithm computes paths based on the closest item and bin locations, maximizing rewards.
