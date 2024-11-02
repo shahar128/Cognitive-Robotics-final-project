@@ -1,0 +1,428 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/GlossyPaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/hospital/protos/EmergencyExitSign.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/kuka/youbot/protos/Youbot.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/paintings/protos/LandscapePainting.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/paintings/protos/PortraitPainting.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/fruits/protos/Apple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/toys/protos/RubberDuck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/kitchen/utensils/protos/Glass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+
+WorldInfo {
+  info [
+    "Simulation of the KUKA youBot robot."
+    "This model includes an accurate and fast simulation of the Meccanum wheels."
+    "The robot can be equiped with various sensors (including the Microsoft Kinect) and configured with zero, one or two arms."
+  ]
+  title "KUKA youBot"
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material1 "InteriorWheelMat"
+      coulombFriction [
+        0, 2, 0
+      ]
+      frictionRotation -0.785398 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+    ContactProperties {
+      material1 "ExteriorWheelMat"
+      coulombFriction [
+        0, 2, 0
+      ]
+      frictionRotation 0.785398 0
+      bounce 0
+      forceDependentSlip [
+        10, 0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.24222724406352544 0.444042324540913 0.8626426700840224 0.803033987900204
+  position -9.757600689376991 -7.8439952897982765 4.207611863152594
+}
+TexturedBackground {
+  texture "factory"
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 10.8
+  location -4 6 5
+  castShadows TRUE
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 9.6
+  location 5 6 5
+}
+Floor {
+  translation 0 -4.3 0
+  name "floor(1)"
+  size 20 16.4
+  tileSize 1 1
+  appearance ThreadMetalPlate {
+  }
+}
+Solid {
+  translation -2.18 -3.57 0.32995324376498825
+  rotation 2.864438594141498e-32 0.7071067811865475 0.7071067811865477 3.141592653589793
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.4 0.6 0.9
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.02
+      }
+    }
+  ]
+  name "longGlass"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.02
+  }
+  physics Physics {
+    density 20
+    mass 0.1
+  }
+  recognitionColors [
+    0 1 0
+  ]
+}
+PortraitPainting {
+  translation 0.7 3.7 3.105
+  rotation 0 0 1 -1.5707953071795862
+}
+LandscapePainting {
+  translation 5 -12.4 3.41
+  rotation 2.653589999981315e-06 -2.653589999981315e-06 0.9999999999929585 1.5708
+}
+LandscapePainting {
+  translation 3 -12.4 3.41
+  rotation 2.653589999981315e-06 -2.653589999981315e-06 0.9999999999929585 1.5708
+  name "landscape painting(1)"
+}
+LandscapePainting {
+  translation 1 -12.4 3.41
+  rotation 2.653589999981315e-06 -2.653589999981315e-06 0.9999999999929585 1.5708
+  name "landscape painting(2)"
+}
+LandscapePainting {
+  translation -1 -12.4 3.41
+  rotation 2.653589999981315e-06 -2.653589999981315e-06 0.9999999999929585 1.5708
+  name "landscape painting(3)"
+}
+PlasticCrate {
+  translation 9 1 0
+  name "plastic crate(6)"
+  color 0 0.333333 1
+}
+PlasticCrate {
+  translation 9 -3 0
+  name "plastic crate(10)"
+  color 0 0.333333 1
+}
+PlasticCrate {
+  translation 9 2 0
+  name "plastic crate(5)"
+  color 0.666667 0.333333 1
+}
+PlasticCrate {
+  translation 9 -2 0
+  name "plastic crate(9)"
+  color 0.666667 0.333333 1
+}
+PlasticCrate {
+  translation 9 3 0
+  name "plastic crate(4)"
+  color 1 0.45098 0.00392157
+}
+PlasticCrate {
+  translation 9 -1 0
+  name "plastic crate(8)"
+  color 1 0.45098 0.00392157
+}
+TexturedBackgroundLight {
+}
+Table {
+  translation -1.5 -3.98 0
+  rotation 0 0 1 -1.5707953071795862
+  size 1 4 0.31
+}
+Solid {
+  translation -3 -3.6 0.339418
+  rotation 0.05313285215147484 -0.9984548466797979 0.01627326531064913 9.785082068748355e-17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0.8 0.6
+      }
+      geometry Box {
+        size 0.03 0.13 0.06
+      }
+    }
+  ]
+  name "board"
+  boundingObject Box {
+    size 0.03 0.13 0.06
+  }
+  physics Physics {
+    density 20
+    mass 0.1
+  }
+  recognitionColors [
+    0 1 1
+  ]
+}
+Youbot {
+  translation -3 0.4 0.101974
+  rotation 0 0 -1 1.5826692134926976
+  controller "my_youbot"
+  bodySlot [
+    Camera {
+      translation 0.3 0 0.4
+      rotation 0 1 0 0
+      fieldOfView 1.5708
+      width 256
+      height 256
+      far 100
+      recognition Recognition {
+        maxRange 10
+        maxObjects 10
+        frameThickness 2
+        segmentation TRUE
+      }
+    }
+    GPS {
+    }
+    Gyro {
+    }
+  ]
+}
+Door {
+  translation -10.05 0 0.02
+  position -0.0015334695710241314
+  doorAppearance GlossyPaint {
+    baseColor 0.16 0.16 0.16
+  }
+  frameAppearance GlossyPaint {
+    baseColor 0.35 0.3503166247043564 0.35
+  }
+}
+Floor {
+  translation 0 -4.22 7
+  rotation 1 0 0 3.141592
+  size 20 16.4
+  tileSize 1 1
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/worlds/textures/asphalt.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+Wall {
+  translation 0 3.82 -0.92
+  name "wall(1)"
+  size 20 0.2 7
+  appearance Roughcast {
+    colorOverride 1 0.827451 0.72549
+    textureTransform TextureTransform {
+      scale 5 1.75
+    }
+  }
+}
+Wall {
+  translation 0 -12.5 0
+  name "wall(2)"
+  size 20 0.2 7
+  appearance Roughcast {
+    colorOverride 1 0.827451 0.72549
+    textureTransform TextureTransform {
+      scale 5 1.75
+    }
+  }
+}
+Wall {
+  translation -10 -4.3 0
+  rotation 0 0 1 1.5708
+  name "wall(3)"
+  size 16.5 0.2 7
+  appearance Roughcast {
+    colorOverride 1 0.827451 0.72549
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation 10 -4.3 0
+  rotation 0 0 1 -1.5708
+  size 16.5 0.2 7
+  appearance Roughcast {
+    colorOverride 1 0.827451 0.72549
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+EmergencyExitSign {
+  translation -9.83 -0.01 2.3
+  rotation 0.5773489358550934 0.5773519358547601 0.5773499358549823 2.0944
+  name "emergency exit sign(1)"
+}
+Solid {
+  translation -9.87 -6.36 4.13
+  rotation 0.7071067811865476 0 0.7071067811865476 3.141592
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/worlds/textures/ladybug.png"
+          ]
+          filtering 5
+        }
+        transparency 0.6
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          rotation 1.5708
+        }
+      }
+      geometry Plane {
+        size 5 5
+      }
+    }
+  ]
+  name "solid(3)"
+}
+PlasticCrate {
+  translation 0 1 0
+  size 0.6 0.6 0.1
+  color 1 0.45098 0.00392157
+}
+PlasticCrate {
+  translation -1 1 0
+  name "plastic crate(1)"
+  size 0.6 0.6 0.1
+  color 0.666667 0.333333 1
+}
+PlasticCrate {
+  translation -3 1 0
+  name "plastic crate(2)"
+  size 0.6 0.6 0.1
+  color 0 0.505882 0
+}
+PlasticCrate {
+  translation 9 0 0
+  name "plastic crate(7)"
+  color 0 0.505882 0
+}
+PlasticCrate {
+  translation 9 -4 0
+  name "plastic crate(11)"
+  color 0 0.505882 0
+}
+PlasticCrate {
+  translation -2 1 0
+  name "plastic crate(3)"
+  size 0.6 0.6 0.1
+  color 0 0.333333 1
+}
+Solid {
+  translation -0.97 -3.53 0.2848430822633492
+  rotation 0 -1 0 3.334544175456242e-17
+  children [
+    Apple {
+      scale 0.5
+    }
+  ]
+  name "apple"
+  physics Physics {
+    mass 0.05
+  }
+  recognitionColors [
+    0 0 1
+  ]
+}
+Solid {
+  translation -3.4 -3.53 0.304208
+  rotation -0.9987246426352432 -0.050488495555452616 3.106919062272064e-06 1.4884141517940737e-17
+  children [
+    RubberDuck {
+      rotation 0 0 1 1.5708
+      scale 0.7
+    }
+  ]
+  name "duck"
+  physics Physics {
+    mass 0.05
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1.9 -3.54 0.30969
+  rotation 4.33618e-18 -3.43851e-18 1 1.5708
+  children [
+    CerealBox {
+      rotation 0 0 1 1.5708
+      size 0.03 0.13 0.06
+      mass 0.05
+    }
+  ]
+  name "CerealBox"
+  physics Physics {
+    mass 0.05
+  }
+  recognitionColors [
+    1 1 0
+  ]
+}
+Solid {
+  translation -2.5 -3.55 0.32865585046728973
+  rotation -0.999994999472172 0.0031501440734744333 -0.00027860898580509203 1.803411865504505e-18
+  children [
+    CardboardBox {
+      translation 0 0 0
+      rotation 0 0 1 1.5708
+      size 0.04 0.04 0.04
+      mass 0.15
+    }
+  ]
+  name "CardboardBox"
+  physics Physics {
+    mass 0.05
+  }
+  recognitionColors [
+    1 1 1
+  ]
+}
+Robot {
+  name "supervisor"
+  controller "supervisor"
+  supervisor TRUE
+}
